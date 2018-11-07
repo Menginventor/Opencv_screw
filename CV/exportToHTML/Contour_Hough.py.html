@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Contour_Hough.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,0,255); }
+.s4 { color: rgb(0,128,128); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Contour_Hough.py</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">def </span><span class="s1">line_sort(Lines):</span><span class="s2">#sorting line by length</span><span class="s1"> 
+ 
+    length = [np.linalg.norm(np.subtract(l[</span><span class="s3">0</span><span class="s1">][</span><span class="s3">0</span><span class="s1">:</span><span class="s3">2</span><span class="s1">],l[</span><span class="s3">0</span><span class="s1">][</span><span class="s3">2</span><span class="s1">:</span><span class="s3">4</span><span class="s1">])) </span><span class="s0">for </span><span class="s1">l </span><span class="s0">in </span><span class="s1">Lines] 
+    sorted_line_index = [x </span><span class="s0">for </span><span class="s1">_, x </span><span class="s0">in </span><span class="s1">sorted(zip(length,range(len(Lines))))] 
+    </span><span class="s2">#print([Lines[i] for i in sorted_line_index])</span><span class="s1"> 
+ 
+    </span><span class="s2">#print(np.sort(zipped.view('i8,i8,i8'), order=['f1'], axis=0).view(np.int))</span><span class="s1"> 
+    </span><span class="s0">return </span><span class="s1">[Lines[i] </span><span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">sorted_line_index]</span></pre>
+</body>
+</html>
